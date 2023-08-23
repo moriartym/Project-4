@@ -1,0 +1,363 @@
+*,*::after , *::before{
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#main-container{
+    background-color: hsl(222, 26%, 31%);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+#top-container,#output-container,#input-container{
+    width: 85%;
+    min-width: 320px;
+}
+
+#top-container{
+    height: 9%;
+    min-height: 57px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#output-container{
+    height: 14%;
+    min-height: 86x;
+    background-color: hsl(224, 36%, 15%);
+    margin-bottom: 25px;
+    border-radius: 15px;
+}
+
+#input-container{
+    padding: 25px;
+    height: 60%;
+    min-height: 360px;
+    background-color: hsl(223, 31%, 20%);
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    'btn1 btn2 btn3 btn4'
+    'btn5 btn6 btn7 btn8'
+    'btn9 btn10 btn11 btn12'
+    'btn13 btn14 btn15 btn16'
+    'btn18 btn18 btn17 btn17';
+    gap: 1em;
+}
+#button7{
+    grid-area: btn1;
+}
+#button8{
+    grid-area: btn2;
+}
+#button9{
+    grid-area: btn3;
+}
+#button-delete{
+    grid-area: btn4;
+}
+#button4{
+    grid-area: btn5;
+}
+#button5{
+    grid-area: btn6;
+}
+#button6{
+    grid-area: btn7;
+}
+#button-plus{
+    grid-area: btn8;
+}
+#button1{
+    grid-area: btn9;
+}
+#button2{
+    grid-area: btn10;
+}
+#button3{
+    grid-area: btn11;
+}
+#button-minus{
+    grid-area: btn12;
+}
+#button-point{
+    grid-area: btn13;
+}
+#button0{
+    grid-area: btn14;
+}
+#button-divide{
+    grid-area: btn15;
+}
+#button-multiply{
+    grid-area: btn16;
+}
+#button-equal{
+    grid-area: btn17;
+}
+#button-reset{
+    grid-area: btn18;
+}
+.input-button, .input-button-bottom, #button-delete{
+    border: none;
+    border-radius: 10px;
+}
+
+#top-right{
+    display: flex;
+    align-items: center;
+}
+
+#toggle-switch{
+    background-color: hsl(223, 31%, 20%);
+    border-radius: 50px;
+    width: 91px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+#toggle-switch input{
+    width:0;
+    height: 0;
+}
+
+#toggle-switch input + label{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+
+#number-container{
+    display: flex;
+    align-self:flex-end;
+    margin-bottom: -10px;
+    justify-content: space-around;
+    width: 81%;
+}
+#toggle-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+#top-lelf{
+    font-size: 32px;
+}
+
+#top-container{
+    color: hsl(0, 0%, 100%);
+}
+
+.input-button{
+    background-color: hsl(30, 25%, 89%);
+    box-shadow: 0px 6px 0px 0px hsl(28, 16%, 65%);
+    font-size: 32px;
+    color: hsl(224, 28%, 35%);
+}
+
+.input-button:hover{
+    background-color: hsl(30, 25%, 95%);
+}
+
+.input-button-delete-reset:hover{
+    background-color: hsl(225, 21%, 70%);
+}
+
+#button-equal:hover{
+    background-color: hsl(6, 63%, 70%);
+}
+
+.input-button-delete-reset{
+    background-color: hsl(225, 21%, 49%);
+    font-size: 25px;
+    box-shadow: 0px 6px 0px 0px hsl(224, 28%, 35%);
+    color: hsl(0, 0%, 100%);
+}
+
+#toggle-switch #one:checked + label {
+    background-color: hsl(6, 63%, 50%) ;
+}
+
+#button-equal{
+    background-color: hsl(6, 63%, 50%);
+    box-shadow: 0px 6px 0px 0px hsl(6, 70%, 34%);
+    font-size: 25px;
+    color: hsl(0, 0%, 100%);
+}
+
+button:hover{
+    cursor: grab;
+}
+
+#toggle-switch #three:checked + label {
+    background-color: hsl(176, 100%, 44%);
+}
+
+#toggle-switch #two:checked + label {
+    background-color: hsl(25, 98%, 40%);
+}
+
+#main-container.active1{
+    background-color: hsl(0, 0%, 90%);
+}
+#input-container.active1{
+    background-color: hsl(0, 5%, 81%);
+}
+#output-container.active1{
+    background-color: hsl(0, 0%, 93%);
+}
+#top-container.active1{
+    color: hsl(60, 10%, 19%);
+}
+.input-button:hover.active1{
+    background-color: hsl(45, 7%, 95%);
+}
+
+.input-button-delete-reset:hover.active1{
+    background-color: hsl(185, 42%, 50%);
+}
+
+#button-equal:hover.active1{
+    background-color: hsl(25, 98%, 60%);
+}
+
+.input-button.active1{
+    background-color: hsl(45, 7%, 89%);
+    box-shadow: 0px 6px 0px 0px hsl(35, 11%, 61%);
+    font-size: 32px;
+    color: hsl(60, 10%, 19%);
+}
+
+.input-button-delete-reset.active1{
+    background-color: hsl(185, 42%, 37%);
+    font-size: 25px;
+    box-shadow: 0px 6px 0px 0px hsl(185, 58%, 25%);
+    color: hsl(0, 0%, 100%);
+}
+
+#toggle-switch.active1{
+    background-color: hsl(0, 5%, 81%);
+
+}
+
+
+
+#button-equal.active1{
+    background-color: hsl(25, 98%, 40%);
+    box-shadow: 0px 6px 0px 0px hsl(25, 99%, 27%);
+    font-size: 25px;
+    color: hsl(0, 0%, 100%);
+}
+
+
+
+#main-container.active{
+    background-color: hsl(268, 75%, 9%);
+}
+#input-container.active{
+    background-color: hsl(268, 71%, 12%)  ;
+}
+#output-container.active{
+    background-color: hsl(268, 71%, 12%)  ;
+}
+#top-container.active{
+    color: hsl(52, 100%, 62%);
+}
+
+
+.input-button.active{
+    background-color: hsl(268, 47%, 21%);
+    box-shadow: 0px 6px 0px 0px hsl(285, 91%, 52%);
+    font-size: 32px;
+    color: hsl(52, 100%, 62%);
+}
+
+.input-button-delete-reset.active{
+    background-color: hsl(281, 89%, 26%);
+    font-size: 25px;
+    box-shadow: 0px 6px 0px 0px hsl(285, 91%, 52%);
+    color: hsl(0, 0%, 100%);
+}
+
+#toggle-switch.active{
+    background-color: hsl(268, 71%, 12%)  ;
+
+}
+
+.input-button:hover.active{
+    background-color: hsl(268, 47%, 41%);
+}
+
+.input-button-delete-reset:hover.active{
+    background-color: hsl(281, 89%, 46%);
+}
+
+#button-equal:hover.active{
+    background-color: hsl(176, 100%, 64%);
+}
+
+
+#button-equal.active{
+    background-color: hsl(176, 100%, 44%);
+    box-shadow: 0px 6px 0px 0px hsl(177, 92%, 70%);
+    font-size: 25px;
+    color: hsl(198, 20%, 13%);
+}
+#output-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#last-output{
+    color: white;
+    font-size: 50px;
+    margin-right: 20px;
+    max-width: 100%;
+    overflow: auto;
+}
+
+#last-output.active{
+    color: hsl(52, 100%, 62%);
+}
+
+#last-output.active1{
+    color: hsl(60, 10%, 19%);
+
+}
+
+
+@media (min-width:576px){
+
+    #top-container,#output-container,#input-container{
+        width: 50%;
+    }
+    #top-container{
+        height: 8.1%;
+    }
+    
+    #output-container{
+        height: 12.6%;
+    }
+    
+    #input-container{
+        height: 54%;
+        gap: 1.5em;
+    }
+
+}
